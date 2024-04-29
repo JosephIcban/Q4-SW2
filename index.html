@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Seatwork 2</title>
+  <style> 
+
+    .MathBot {
+        align-content: center;
+    }
+
+    .container {
+        background-color: gray;
+         border: 5px dotted black;
+    }
+
+    button {
+          width: 160px; 
+          height: 80px;  
+          padding: 20px;
+          text-align: center;
+          border: 4px solid black;
+          margin: 6px;
+    }
+
+    h1 { 
+        text-align: center;
+
+    }
+
+    .button {
+        font-weight: bold;
+
+    }
+
+    .answer {
+        text-align: center;
+        border: 4px dashed white;
+        padding: 10px;
+        margin-top: 15px;
+    }
+
+    #display {
+        font-size: 50px;
+    }
+
+
+
+  </style>
+</head>
+<body>
+    <div class="MathBot">
+          <div class="container">
+            <div>
+            <h1>MathBot</h1>
+             <center><img src="https://cdn2.iconfinder.com/data/icons/cute-school-2/512/school_education_cute-08-512.png" width="200px"></center>
+             </div>
+             <center>
+            <center><p>Hi my name is MathBot. I'm here to give you a challenge!</p></center>
+                <input id="num1">
+                <input id="num2">
+                <br>
+                <br>
+                <div class="button">
+
+                <button onclick="plus()" type="submit" id="calc">sum of x and y</button> 
+
+                <button onclick="multiply()" type="submit" id="prod">product of x and y</button>
+
+                <button onclick="difference()" type="submit" id="sub">diff of x and y</button> 
+
+                <button onclick="quotient()" type="submit" id="divide">quotient of x and y</button> 
+
+                </div>
+
+             <div class="answer">
+                <p id="display"></p>
+            </div></center>
+        <script>
+            function plus() { 
+                let num1=parseInt(document.getElementById("num1").value);
+                let num2=parseInt(document.getElementById("num2").value);
+                let sum=parseInt(num1)+parseInt(num2); 
+                document.getElementById("display").innerHTML="The sum of x and y is "+sum;       
+             }
+
+             function multiply() { 
+                let num1=parseInt(document.getElementById("num1").value);
+                let num2=parseInt(document.getElementById("num2").value);
+                let product=parseInt(num1)*parseInt(num2); 
+                document.getElementById("display").innerHTML="The product of x and y is "+product;       
+            }
+
+            function difference() { 
+                let num1=parseInt(document.getElementById("num1").value);
+                let num2=parseInt(document.getElementById("num2").value);
+                let difference = parseInt(num1)-parseInt(num2); 
+                document.getElementById("display").innerHTML="The difference of x and y is "+difference;       
+            }
+
+            function quotient() { 
+                let num1=parseInt(document.getElementById("num1").value);
+                let num2=parseInt(document.getElementById("num2").value);
+                let quotient=parseInt(num1)/parseInt(num2); 
+                 document.getElementById("display").innerHTML="The quotient of x and y is "+quotient;     
+            }
+        </script>
+        </div>
+    </div>
+    </div>
+    </body>
+ </html>
+</body>
